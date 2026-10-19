@@ -7,108 +7,54 @@
   <meta name="description" content="AMANITO es tu plataforma personal de estudio. Organiza tus tareas, toma notas y gestiona tu aprendizaje en un solo lugar." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+
+  <!-- NAVBAR -->
   <nav class="navbar">
     <div class="container navbar-inner">
       <div class="logo">
-        <img src="./images/logo/logo1.jpeg" alt="AMANITO" class="logo-icon-img" />
+        <div class="logo-icon">A</div>
         <span class="logo-text">AMANITO</span>
       </div>
-      <div class="navbar-actions">
-        <button class="btn-theme-toggle" id="theme-toggle" type="button" aria-label="Cambiar tema" title="Cambiar tema">
-          <svg class="icon-sol" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
-          <svg class="icon-luna" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
-        </button>
-        <a href="https://app.amanito.app/auth" class="btn btn-primary">
-          Iniciar sesión
-        </a>
-      </div>
+      <a href="https://app.amanito.app/auth" class="btn btn-primary">
+        Iniciar sesión
+      </a>
     </div>
   </nav>
 
-  <section class="hero" id="hero">
-    <div class="container hero-inner hero-grid">
-      <div class="hero-copy">
-        <div class="hero-badge">
-          <span class="hero-badge-dot" aria-hidden="true"></span>
-          <span>Cuaderno digital y priorización por semáforo</span>
-        </div>
-        <h1 class="hero-title">
-          Estudia con orden. Aprende más rápido.
-        </h1>
-        <p class="hero-description">
-          AMANITO reúne tus apuntes, bloques Pomodoro y tareas clasificadas por urgencia real en una sola mesa de trabajo pensada para estudiantes.
-        </p>
-        <div class="hero-actions">
-          <a href="https://app.amanito.app/auth" class="btn btn-primary btn-lg hero-cta-primary">
-            Crear cuenta gratis
-          </a>
-          <a href="#funciones" class="btn btn-ghost btn-lg hero-cta-secondary">
-            Ver cómo funciona
-          </a>
-        </div>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        Plataforma de estudio personal
       </div>
-
-      <aside class="hero-workspace" aria-label="Vista previa interactiva de tu mesa de estudio">
-        <div class="study-desk-card">
-          <header class="study-desk-header">
-            <div class="study-desk-notebook">
-              <span class="study-desk-folder">Mis clases de hoy · Paso a paso</span>
-              <strong class="study-desk-title">Lectura, Números y Arte</strong>
-            </div>
-            <div class="study-pomodoro-pill" aria-label="Temporizador de enfoque corto activo">
-              <span class="study-pomodoro-dot" aria-hidden="true"></span>
-              <span class="study-pomodoro-time">10:00</span>
-            </div>
-          </header>
-
-          <div class="study-filter-bar" role="toolbar" aria-label="Filtrar tareas por estado del semáforo">
-            <button type="button" class="study-filter-btn is-active" data-filter="todas" aria-pressed="true">Todas (3)</button>
-            <button type="button" class="study-filter-btn" data-filter="rojo" aria-pressed="false">
-              <span class="semaforo-dot semaforo-dot-rojo" aria-hidden="true"></span>Urgente
-            </button>
-            <button type="button" class="study-filter-btn" data-filter="amarillo" aria-pressed="false">
-              <span class="semaforo-dot semaforo-dot-amarillo" aria-hidden="true"></span>En curso
-            </button>
-            <button type="button" class="study-filter-btn" data-filter="verde" aria-pressed="false">
-              <span class="semaforo-dot semaforo-dot-verde" aria-hidden="true"></span>Listo
-            </button>
-          </div>
-
-          <ul class="study-task-list">
-            <li class="study-task-item study-task-rojo" data-priority="rojo">
-              <span class="semaforo-bola semaforo-bola-rojo" aria-hidden="true"></span>
-              <div class="study-task-content">
-                <strong class="study-task-name">Leer el cuento de los animales</strong>
-                <span class="study-task-meta">Para hoy · Cuaderno de Lectura (10 min)</span>
-              </div>
-              <span class="study-task-tag study-task-tag-rojo">Urgente</span>
-            </li>
-            <li class="study-task-item study-task-amarillo" data-priority="amarillo">
-              <span class="semaforo-bola semaforo-bola-amarillo" aria-hidden="true"></span>
-              <div class="study-task-content">
-                <strong class="study-task-name">Sumar con bloques y pintar figuras</strong>
-                <span class="study-task-meta">Paso 1 de 2 · Cuaderno de Matemáticas</span>
-              </div>
-              <span class="study-task-tag study-task-tag-amarillo">En progreso</span>
-            </li>
-            <li class="study-task-item study-task-verde" data-priority="verde">
-              <span class="semaforo-bola semaforo-bola-verde" aria-hidden="true"></span>
-              <div class="study-task-content">
-                <strong class="study-task-name">Dibujar mi planta favorita</strong>
-                <span class="study-task-meta">¡Muy bien! · Cuaderno de Ciencias y Arte</span>
-              </div>
-              <span class="study-task-tag study-task-tag-verde">Completado</span>
-            </li>
-          </ul>
-        </div>
-      </aside>
+      <h1 class="hero-title">
+        Estudia con orden.<br />
+        <span class="hero-title-accent">Aprende más rápido.</span>
+      </h1>
+      <p class="hero-description">
+        AMANITO te ayuda a organizar tus tareas, tomar notas y llevar
+        el control de tu progreso, todo en un solo lugar diseñado para estudiantes.
+      </p>
+      <div class="hero-actions">
+        <a href="https://app.amanito.app/auth" class="btn btn-primary btn-lg">
+          Crear cuenta gratis
+        </a>
+        <a href="#funciones" class="btn btn-ghost btn-lg">
+          Ver cómo funciona
+        </a>
+      </div>
     </div>
+    <div class="hero-blob hero-blob-1"></div>
+    <div class="hero-blob hero-blob-2"></div>
+    <div class="hero-blob hero-blob-3"></div>
   </section>
 
+  <!-- BANDA DE CONFIANZA -->
   <div class="trust-band">
     <div class="container trust-inner">
       <div class="trust-item">
@@ -126,6 +72,7 @@
     </div>
   </div>
 
+  <!-- FUNCIONES -->
   <section class="features" id="funciones">
     <div class="container">
       <div class="section-header">
@@ -135,7 +82,9 @@
           Herramientas simples y efectivas diseñadas pensando en cómo aprendemos de verdad.
         </p>
       </div>
+
       <div class="features-grid">
+
         <div class="feature-card feature-card-amarillo">
           <div class="feature-icon feature-icon-amarillo">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
@@ -145,6 +94,7 @@
             Escribe y organiza tus apuntes en cuadernos digitales. Guarda todo lo importante y accédelo cuando lo necesites.
           </p>
         </div>
+
         <div class="feature-card feature-card-rojo">
           <div class="feature-icon feature-icon-rojo">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/></svg>
@@ -154,6 +104,7 @@
             Clasifica tus tareas por urgencia con colores. Sabrás de un vistazo qué necesita atención y qué ya está listo.
           </p>
         </div>
+
         <div class="feature-card feature-card-verde">
           <div class="feature-icon feature-icon-verde">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
@@ -163,6 +114,7 @@
             Agrupa tus cuadernos por materia o proyecto. Mantén todo ordenado para encontrar lo que necesitas cuando lo necesitas.
           </p>
         </div>
+
         <div class="feature-card feature-card-amarillo">
           <div class="feature-icon feature-icon-amarillo">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
@@ -172,6 +124,7 @@
             Usa el cronómetro y la técnica Pomodoro para estudiar con enfoque. Configura alertas para no perderte ningún compromiso.
           </p>
         </div>
+
         <div class="feature-card feature-card-rojo">
           <div class="feature-icon feature-icon-rojo">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
@@ -181,6 +134,7 @@
             Accede a artículos y consejos sobre métodos de estudio respaldados por la ciencia para aprender de forma más efectiva.
           </p>
         </div>
+
         <div class="feature-card feature-card-verde">
           <div class="feature-icon feature-icon-verde">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
@@ -190,10 +144,12 @@
             Visualiza cuánto has avanzado con tus tareas y cuadernos. Mantén la motivación viendo todo lo que has logrado.
           </p>
         </div>
+
       </div>
     </div>
   </section>
 
+  <!-- SEMÁFORO EXPLICATIVO -->
   <section class="semaforo-section">
     <div class="container semaforo-inner">
       <div class="semaforo-texto">
@@ -231,15 +187,15 @@
         <div class="semaforo-card">
           <div class="semaforo-card-item semaforo-card-item-rojo">
             <div class="semaforo-bola semaforo-bola-rojo"></div>
-            <span>Leer mi cuento corto</span>
+            <span>Examen de cálculo</span>
           </div>
           <div class="semaforo-card-item semaforo-card-item-amarillo">
             <div class="semaforo-bola semaforo-bola-amarillo"></div>
-            <span>Sumar y colorear figuras</span>
+            <span>Proyecto de historia</span>
           </div>
           <div class="semaforo-card-item semaforo-card-item-verde">
             <div class="semaforo-bola semaforo-bola-verde"></div>
-            <span>Dibujar mi animal favorito</span>
+            <span>Tarea de inglés</span>
           </div>
           <p class="semaforo-card-label">Mis tareas de hoy</p>
         </div>
@@ -247,6 +203,7 @@
     </div>
   </section>
 
+  <!-- CTA -->
   <section class="cta">
     <div class="container cta-inner">
       <h2 class="cta-title">
@@ -264,61 +221,16 @@
     <div class="cta-blob cta-blob-2"></div>
   </section>
 
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer-inner">
       <div class="logo">
-        <img src="./images/logo/logo1.jpeg" alt="AMANITO" class="logo-icon-img logo-icon-img-small" />
+        <div class="logo-icon logo-icon-small">A</div>
         <span class="logo-text">AMANITO</span>
-      </div>
-      <div style="display: flex; gap: 1rem; margin: 1rem 0; font-size: 0.875rem;">
-        <a href="https://app.amanito.app/terms" style="color: var(--text-muted); text-decoration: none;">Términos y Condiciones</a>
-        <a href="https://app.amanito.app/privacy" style="color: var(--text-muted); text-decoration: none;">Política de Privacidad</a>
-        <a href="https://app.amanito.app/cookies" style="color: var(--text-muted); text-decoration: none;">Política de Cookies</a>
       </div>
       <p class="footer-copy">© 2026 AMANITO. Todos los derechos reservados.</p>
     </div>
   </footer>
-  <script>
-    (function () {
-      var boton = document.getElementById('theme-toggle');
-      var CLAVE = 'amanito-tema';
 
-      function aplicarTemaGuardado() {
-        var guardado = localStorage.getItem(CLAVE);
-        if (guardado === 'oscuro') {
-          document.body.classList.add('dark-mode');
-        }
-      }
-
-      function alternarTema() {
-        document.body.classList.toggle('dark-mode');
-        var esOscuro = document.body.classList.contains('dark-mode');
-        localStorage.setItem(CLAVE, esOscuro ? 'oscuro' : 'claro');
-      }
-
-      aplicarTemaGuardado();
-      if (boton) boton.addEventListener('click', alternarTema);
-
-      var botonesFiltro = document.querySelectorAll('.study-filter-btn');
-      var tareas = document.querySelectorAll('.study-task-item');
-
-      botonesFiltro.forEach(function (btnFiltro) {
-        btnFiltro.addEventListener('click', function () {
-          var prioridad = btnFiltro.getAttribute('data-filter');
-
-          botonesFiltro.forEach(function (b) {
-            var activo = b === btnFiltro;
-            b.classList.toggle('is-active', activo);
-            b.setAttribute('aria-pressed', activo ? 'true' : 'false');
-          });
-
-          tareas.forEach(function (tarea) {
-            var coincide = prioridad === 'todas' || tarea.getAttribute('data-priority') === prioridad;
-            tarea.hidden = !coincide;
-          });
-        });
-      });
-    })();
-  </script>
 </body>
 </html>

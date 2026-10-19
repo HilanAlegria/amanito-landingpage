@@ -1,10 +1,10 @@
-# 🌱 AMANITO — Landing Page (Vista de Muestra)
+# AMANITO — Landing Page (Vista de Muestra)
 
 Este repositorio contiene la **landing page promocional** del proyecto **AMANITO**, una plataforma de estudio y organización escolar pensada especialmente para niños pequeños con **TDAH (Trastorno por Déficit de Atención e Hiperactividad)** y sus variantes.
 
 ---
 
-## ⚠️ Propósito actual del repositorio
+## Propósito actual del repositorio
 
 > **Importante:** Esta página web está diseñada **únicamente con fines de publicidad y presentación futura** para cuando la plataforma principal de **AMANITO** esté completamente terminada y lista para su lanzamiento público.
 >
@@ -12,7 +12,7 @@ Este repositorio contiene la **landing page promocional** del proyecto **AMANITO
 
 ---
 
-## ✨ ¿Qué presenta esta muestra visual?
+## ¿Qué presenta esta muestra visual?
 
 - **Sección Hero con mesa de estudio demostrativa**: Vista previa visual de cuadernos escolares infantiles (*Lectura, Números y Arte*), temporizador de enfoque corto (`10:00`) y filtro visual por colores.
 - **Sistema de Semáforos**: Demostración visual de cómo clasificar tareas sencillas mediante tres colores intuitivos:
@@ -24,7 +24,7 @@ Este repositorio contiene la **landing page promocional** del proyecto **AMANITO
 
 ---
 
-## 🛠️ Estructura de archivos
+## Estructura de archivos
 
 ```text
 amanito-landingpage/
@@ -38,7 +38,7 @@ amanito-landingpage/
 
 ---
 
-## 🚀 Visualización local
+## Visualización local
 
 Al ser una página estática de muestra en **HTML5, CSS3 y JavaScript**, puedes abrir directamente el archivo `index.html` en cualquier navegador web o servirlo localmente:
 

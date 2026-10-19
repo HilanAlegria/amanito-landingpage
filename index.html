@@ -7,11 +7,10 @@
   <meta name="description" content="AMANITO es tu plataforma personal de estudio. Organiza tus tareas, toma notas y gestiona tu aprendizaje en un solo lugar." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- NAVBAR -->
   <nav class="navbar">
     <div class="container navbar-inner">
       <div class="logo">
@@ -30,36 +29,86 @@
     </div>
   </nav>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container hero-inner">
-      <div class="hero-badge">
-        <span class="hero-badge-dot"></span>
-        Plataforma de estudio personal
+  <section class="hero" id="hero">
+    <div class="container hero-inner hero-grid">
+      <div class="hero-copy">
+        <div class="hero-badge">
+          <span class="hero-badge-dot" aria-hidden="true"></span>
+          <span>Cuaderno digital y priorización por semáforo</span>
+        </div>
+        <h1 class="hero-title">
+          Estudia con orden. Aprende más rápido.
+        </h1>
+        <p class="hero-description">
+          AMANITO reúne tus apuntes, bloques Pomodoro y tareas clasificadas por urgencia real en una sola mesa de trabajo pensada para estudiantes.
+        </p>
+        <div class="hero-actions">
+          <a href="https://app.amanito.app/auth" class="btn btn-primary btn-lg hero-cta-primary">
+            Crear cuenta gratis
+          </a>
+          <a href="#funciones" class="btn btn-ghost btn-lg hero-cta-secondary">
+            Ver cómo funciona
+          </a>
+        </div>
       </div>
-      <h1 class="hero-title">
-        Estudia con orden.<br />
-        <span class="hero-title-accent">Aprende más rápido.</span>
-      </h1>
-      <p class="hero-description">
-        AMANITO te ayuda a organizar tus tareas, tomar notas y llevar
-        el control de tu progreso, todo en un solo lugar diseñado para estudiantes.
-      </p>
-      <div class="hero-actions">
-        <a href="https://app.amanito.app/auth" class="btn btn-primary btn-lg">
-          Crear cuenta gratis
-        </a>
-        <a href="#funciones" class="btn btn-ghost btn-lg">
-          Ver cómo funciona
-        </a>
-      </div>
+
+      <aside class="hero-workspace" aria-label="Vista previa interactiva de tu mesa de estudio">
+        <div class="study-desk-card">
+          <header class="study-desk-header">
+            <div class="study-desk-notebook">
+              <span class="study-desk-folder">Mis clases de hoy · Paso a paso</span>
+              <strong class="study-desk-title">Lectura, Números y Arte</strong>
+            </div>
+            <div class="study-pomodoro-pill" aria-label="Temporizador de enfoque corto activo">
+              <span class="study-pomodoro-dot" aria-hidden="true"></span>
+              <span class="study-pomodoro-time">10:00</span>
+            </div>
+          </header>
+
+          <div class="study-filter-bar" role="toolbar" aria-label="Filtrar tareas por estado del semáforo">
+            <button type="button" class="study-filter-btn is-active" data-filter="todas" aria-pressed="true">Todas (3)</button>
+            <button type="button" class="study-filter-btn" data-filter="rojo" aria-pressed="false">
+              <span class="semaforo-dot semaforo-dot-rojo" aria-hidden="true"></span>Urgente
+            </button>
+            <button type="button" class="study-filter-btn" data-filter="amarillo" aria-pressed="false">
+              <span class="semaforo-dot semaforo-dot-amarillo" aria-hidden="true"></span>En curso
+            </button>
+            <button type="button" class="study-filter-btn" data-filter="verde" aria-pressed="false">
+              <span class="semaforo-dot semaforo-dot-verde" aria-hidden="true"></span>Listo
+            </button>
+          </div>
+
+          <ul class="study-task-list">
+            <li class="study-task-item study-task-rojo" data-priority="rojo">
+              <span class="semaforo-bola semaforo-bola-rojo" aria-hidden="true"></span>
+              <div class="study-task-content">
+                <strong class="study-task-name">Leer el cuento de los animales</strong>
+                <span class="study-task-meta">Para hoy · Cuaderno de Lectura (10 min)</span>
+              </div>
+              <span class="study-task-tag study-task-tag-rojo">Urgente</span>
+            </li>
+            <li class="study-task-item study-task-amarillo" data-priority="amarillo">
+              <span class="semaforo-bola semaforo-bola-amarillo" aria-hidden="true"></span>
+              <div class="study-task-content">
+                <strong class="study-task-name">Sumar con bloques y pintar figuras</strong>
+                <span class="study-task-meta">Paso 1 de 2 · Cuaderno de Matemáticas</span>
+              </div>
+              <span class="study-task-tag study-task-tag-amarillo">En progreso</span>
+            </li>
+            <li class="study-task-item study-task-verde" data-priority="verde">
+              <span class="semaforo-bola semaforo-bola-verde" aria-hidden="true"></span>
+              <div class="study-task-content">
+                <strong class="study-task-name">Dibujar mi planta favorita</strong>
+                <span class="study-task-meta">¡Muy bien! · Cuaderno de Ciencias y Arte</span>
+              </div>
+              <span class="study-task-tag study-task-tag-verde">Completado</span>
+            </li>
+          </ul>
+        </div>
+      </aside>
     </div>
-    <div class="hero-blob hero-blob-1"></div>
-    <div class="hero-blob hero-blob-2"></div>
-    <div class="hero-blob hero-blob-3"></div>
   </section>
 
-  <!-- BANDA DE CONFIANZA -->
   <div class="trust-band">
     <div class="container trust-inner">
       <div class="trust-item">
@@ -77,7 +126,6 @@
     </div>
   </div>
 
-  <!-- FUNCIONES -->
   <section class="features" id="funciones">
     <div class="container">
       <div class="section-header">
@@ -146,7 +194,6 @@
     </div>
   </section>
 
-  <!-- SEMÁFORO EXPLICATIVO -->
   <section class="semaforo-section">
     <div class="container semaforo-inner">
       <div class="semaforo-texto">
@@ -184,15 +231,15 @@
         <div class="semaforo-card">
           <div class="semaforo-card-item semaforo-card-item-rojo">
             <div class="semaforo-bola semaforo-bola-rojo"></div>
-            <span>Examen de cálculo</span>
+            <span>Leer mi cuento corto</span>
           </div>
           <div class="semaforo-card-item semaforo-card-item-amarillo">
             <div class="semaforo-bola semaforo-bola-amarillo"></div>
-            <span>Proyecto de historia</span>
+            <span>Sumar y colorear figuras</span>
           </div>
           <div class="semaforo-card-item semaforo-card-item-verde">
             <div class="semaforo-bola semaforo-bola-verde"></div>
-            <span>Tarea de inglés</span>
+            <span>Dibujar mi animal favorito</span>
           </div>
           <p class="semaforo-card-label">Mis tareas de hoy</p>
         </div>
@@ -200,7 +247,6 @@
     </div>
   </section>
 
-  <!-- CTA -->
   <section class="cta">
     <div class="container cta-inner">
       <h2 class="cta-title">
@@ -233,8 +279,6 @@
     </div>
   </footer>
   <script>
-    // Modo oscuro — alterna la clase "dark-mode" en <body> y recuerda
-    // la preferencia del usuario en localStorage.
     (function () {
       var boton = document.getElementById('theme-toggle');
       var CLAVE = 'amanito-tema';
@@ -254,6 +298,26 @@
 
       aplicarTemaGuardado();
       if (boton) boton.addEventListener('click', alternarTema);
+
+      var botonesFiltro = document.querySelectorAll('.study-filter-btn');
+      var tareas = document.querySelectorAll('.study-task-item');
+
+      botonesFiltro.forEach(function (btnFiltro) {
+        btnFiltro.addEventListener('click', function () {
+          var prioridad = btnFiltro.getAttribute('data-filter');
+
+          botonesFiltro.forEach(function (b) {
+            var activo = b === btnFiltro;
+            b.classList.toggle('is-active', activo);
+            b.setAttribute('aria-pressed', activo ? 'true' : 'false');
+          });
+
+          tareas.forEach(function (tarea) {
+            var coincide = prioridad === 'todas' || tarea.getAttribute('data-priority') === prioridad;
+            tarea.hidden = !coincide;
+          });
+        });
+      });
     })();
   </script>
 </body>
